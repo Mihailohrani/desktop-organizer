@@ -28,7 +28,7 @@ if input("Do you want to add custom file categories? (yes/no): ").strip().lower(
             break
         extensions = input(f"Enter file extensions for {category} (comma-separated, e.g., .py, .js): ").strip().split(",")
         categories[category] = [ext.strip() for ext in extensions]
-        print(f"✅ Added category '{category}' with extensions: {categories[category]}")
+        print(f"Added category '{category}' with extensions: {categories[category]}")
 
 for folder in categories:
     os.makedirs(os.path.join(directory, folder), exist_ok=True)
